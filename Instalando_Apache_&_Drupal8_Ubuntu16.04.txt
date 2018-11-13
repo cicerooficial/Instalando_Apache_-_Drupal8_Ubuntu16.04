@@ -1,0 +1,147 @@
+#Na máquina Ubuntu abra o terminal [ CTRL + ALT + T ]
+
+#Entre como Super Usuario
+sudo su
+
+#Instale o Apache
+sudo apt-get install apache2
+
+#Aguarde a instalação
+***************************************************
+
+#Instalando o MYSQL
+sudo apt-get update
+sudo apt-get install mysql-server
+mysql_secure_installation
+
+#Insira a palavra passe para utilizar como root
+
+#Quando solicitar informações digite
+
+[ senha ]
+[ yes ]
+[ 0 ]
+[ yes ]
+[ no ]
+[ yes ]
+[ no ]
+
+
+#Aguarde a instalação
+***************************************************
+
+#Instale o php com o comando
+apt-get install php libapache2-mod-php php-mcrypt php-mysql
+
+apt-get install php7.0-dom php7.0-gd php7.0-xml
+
+#teste a instalação com o comando
+php -v
+
+#Deve aparecer informações sobre o php
+***************************************************
+
+#Restart o apache com o comando
+sudo service apache2 restart
+
+***************************************************
+
+Saia do terminal
+
+#Abra o firefox e digite localhost 
+#Você deve substituir esse arquivo (localizado em /var/www/#html/index.html) antes de continuar a operar seu servidor #HTTP.
+
+#Vamos no caminho Computador var>www>html> 
+Na pasta clique com o botão direito > Abrir com o terminal
+
+#Insira os comandos abaixo
+sudo su
+mkdir [nome de uma pasta]
+
+#Volte ao firefox e insira localhost[nome da pasta criada]
+#Se acessar esse local deu tudo certo na instalação do Apache
+
+#FIM INSTALAÇÃO APACHE
+***************************************************
+#Instalação do Drupal8 [ EEIITAAAA ]
+
+DOWNLOAD DRUPAL 8
+#Pesquise no Google Drupal 8 e no site do drupal clique na área de download
+
+#Faça o download pelo arquivo .ZIP e extraia o arquivo de download na pasta download 
+
+#Renomeie o arquivo tirando a parte da sua versão e deixe como drupal
+
+#Abra o terminal[ CTRL + ALT + T ] e no terminal mova o arquivo para a pasta httml com o comando
+
+mv drupal /var/www/html
+
+#No firefox acesse pelo local host a pasta movida para iniciar a instalação do drupal
+
+localhost/drupal
+
+#Mude a linguagem para inglês, save e continued
+
+#O drupal terá alguns erros de instalação com isso você deve seguir alguns comandos. Volte ao terminal para dar algumas permissões
+
+#Reinicie o Apache
+
+service apache2 restart
+
+#Siga os comandos abaixo para dar permissões
+
+mkdir /var/www/html/drupal/sites/default/file
+
+chmod a+w /var/www/html/drupal/sites/default
+
+cp /var/www/html/drupal/sites/default/default.settings.php /var/www/html/drupal/sites/default/settings.php
+
+chmod a+w /var/www/html/drupal/sites/default/settings.php
+
+chmod a+w /var/www/html/drupal/sites/default
+
+mysq -u root -p
+[senha do banco]
+
+
+##### Caso dê erro de acesso nas abas do drupal siga o segundo link de baixo e/ou os comandos #####
+
+[link de ajuda 1] https://www.youtube.com/watch?v=cyn_6-UCjDY
+
+[link de ajuda 2] https://www.drupal.org/forum/support/installing-drupal/2013-11-12/solved-the-requested-url-drupaladmincontent-was-not-found
+
+#Abra um novo terminal como super usuario e vá no caminho
+
+cd /etc/apache2
+cd sites-available
+
+#Abra o arquivo 000-default.conf com o nano com o comando
+
+nano 000-default.conf
+
+#Insira no final do documento as linhas abaixo
+
+<Directory /var/www/html/drupal >
+        Options Indexes FollowSymLinks
+        AllowOverride all
+        Require all granted
+</Directory>
+
+#Reinicie o drupal com os seguintes comandos
+
+service apache2 restart
+
+a2enmod rewrite
+
+service apache2 restart
+
+#Com isso você deve ter acesso as abas de configurações e preferencias do drupal, agora busque como configurar um site no drupal:-)
+
+#Fim instalação drupal 8 no ubuntu
+****************************************************************
+
+#Como configurar drupal - curso em espanhol
+Seguir passos de configuração do curso em espanhol instalando com Windows 8
+https://www.youtube.com/watch?v=-6IaSHfbnyI&index=4&list=PLY3lWsAagE8N7ubeqj6LY5r-ak7_BbQ0A
+
+#13/11/2018
