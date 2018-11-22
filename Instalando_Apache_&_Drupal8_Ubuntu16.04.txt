@@ -1,4 +1,4 @@
-#Na m·quina Ubuntu abra o terminal [ CTRL + ALT + T ]
+#Na m√°quina Ubuntu abra o terminal [ CTRL + ALT + T ]
 
 #Entre como Super Usuario
 sudo su
@@ -6,7 +6,7 @@ sudo su
 #Instale o Apache
 sudo apt-get install apache2
 
-#Aguarde a instalaÁ„o
+#Aguarde a instala√ß√£o
 ***************************************************
 
 #Instalando o MYSQL
@@ -16,7 +16,7 @@ mysql_secure_installation
 
 #Insira a palavra passe para utilizar como root
 
-#Quando solicitar informaÁıes digite
+#Quando solicitar informa√ß√µes digite
 
 [ senha ]
 [ yes ]
@@ -27,7 +27,7 @@ mysql_secure_installation
 [ no ]
 
 
-#Aguarde a instalaÁ„o
+#Aguarde a instala√ß√£o
 ***************************************************
 
 #Instale o php com o comando
@@ -35,10 +35,10 @@ apt-get install php libapache2-mod-php php-mcrypt php-mysql
 
 apt-get install php7.0-dom php7.0-gd php7.0-xml
 
-#teste a instalaÁ„o com o comando
+#teste a instala√ß√£o com o comando
 php -v
 
-#Deve aparecer informaÁıes sobre o php
+#Deve aparecer informa√ß√µes sobre o php
 ***************************************************
 
 #Restart o apache com o comando
@@ -49,46 +49,46 @@ sudo service apache2 restart
 Saia do terminal
 
 #Abra o firefox e digite localhost 
-#VocÍ deve substituir esse arquivo (localizado em /var/www/#html/index.html) antes de continuar a operar seu servidor #HTTP.
+#Voc√™ deve substituir esse arquivo (localizado em /var/www/#html/index.html) antes de continuar a operar seu servidor #HTTP.
 
 #Vamos no caminho Computador var>www>html> 
-Na pasta clique com o bot„o direito > Abrir com o terminal
+Na pasta clique com o bot√£o direito > Abrir com o terminal
 
 #Insira os comandos abaixo
 sudo su
 mkdir [nome de uma pasta]
 
 #Volte ao firefox e insira localhost[nome da pasta criada]
-#Se acessar esse local deu tudo certo na instalaÁ„o do Apache
+#Se acessar esse local deu tudo certo na instala√ß√£o do Apache
 
-#FIM INSTALA«√O APACHE
+#FIM INSTALA√á√ÉO APACHE
 ***************************************************
-#InstalaÁ„o do Drupal8 [ EEIITAAAA ]
+#Instala√ß√£o do Drupal8 [ EEIITAAAA ]
 
 DOWNLOAD DRUPAL 8
-#Pesquise no Google Drupal 8 e no site do drupal clique na ·rea de download
+#Pesquise no Google Drupal 8 e no site do drupal clique na √°rea de download
 
-#FaÁa o download pelo arquivo .ZIP e extraia o arquivo de download na pasta download 
+#Fa√ßa o download pelo arquivo .ZIP e extraia o arquivo de download na pasta download 
 
-#Renomeie o arquivo tirando a parte da sua vers„o e deixe como drupal
+#Renomeie o arquivo tirando a parte da sua vers√£o e deixe como drupal
 
 #Abra o terminal[ CTRL + ALT + T ] e no terminal mova o arquivo para a pasta httml com o comando
 
 mv drupal /var/www/html
 
-#No firefox acesse pelo local host a pasta movida para iniciar a instalaÁ„o do drupal
+#No firefox acesse pelo local host a pasta movida para iniciar a instala√ß√£o do drupal
 
 localhost/drupal
 
-#Mude a linguagem para inglÍs, save e continued
+#Mude a linguagem para ingl√™s, save e continued
 
-#O drupal ter· alguns erros de instalaÁ„o com isso vocÍ deve seguir alguns comandos. Volte ao terminal para dar algumas permissıes
+#O drupal ter√° alguns erros de instala√ß√£o com isso voc√™ deve seguir alguns comandos. Volte ao terminal para dar algumas permiss√µes
 
 #Reinicie o Apache
 
 service apache2 restart
 
-#Siga os comandos abaixo para dar permissıes
+#Siga os comandos abaixo para dar permiss√µes
 
 mkdir /var/www/html/drupal/sites/default/file
 
@@ -104,13 +104,13 @@ mysq -u root -p
 [senha do banco]
 
 
-##### Caso dÍ erro de acesso nas abas do drupal siga o segundo link de baixo e/ou os comandos #####
+##### Caso d√™ erro de acesso nas abas do drupal siga o segundo link de baixo e/ou os comandos #####
 
 [link de ajuda 1] https://www.youtube.com/watch?v=cyn_6-UCjDY
 
 [link de ajuda 2] https://www.drupal.org/forum/support/installing-drupal/2013-11-12/solved-the-requested-url-drupaladmincontent-was-not-found
 
-#Abra um novo terminal como super usuario e v· no caminho
+#Abra um novo terminal como super usuario e v√° no caminho
 
 cd /etc/apache2
 cd sites-available
@@ -135,13 +135,35 @@ a2enmod rewrite
 
 service apache2 restart
 
-#Com isso vocÍ deve ter acesso as abas de configuraÁıes e preferencias do drupal, agora busque como configurar um site no drupal:-)
+#Com isso voc√™ deve ter acesso as abas de configura√ß√µes e preferencias do drupal, agora busque como configurar um site no drupal:-)
 
-#Fim instalaÁ„o drupal 8 no ubuntu
+#Fim instala√ß√£o drupal 8 no ubuntu
 ****************************************************************
 
 #Como configurar drupal - curso em espanhol
-Seguir passos de configuraÁ„o do curso em espanhol instalando com Windows 8
+Seguir passos de configura√ß√£o do curso em espanhol instalando com Windows 8
 https://www.youtube.com/watch?v=-6IaSHfbnyI&index=4&list=PLY3lWsAagE8N7ubeqj6LY5r-ak7_BbQ0A
+
+****************************************************************
+
+#ASSISTA TODOS OS V√çDEOS PARA TER UMA BASE DE COMO MONTAR E CONFIGURAR UM SITE DO DRUPAL
+LINK V√çDEO AULAS - https://www.youtube.com/watch?v=LvhuY8yxzgY&list=PLVBFeeG0QsqnvP1Jm4mymcn0WV0Wd9P4M
+
+****************************************************************
+
+#COLOCANDO O DRUPAL PARA SER ACESSADO PELO WINDOWS [LOGADO NO DOM√çNIO] VIA CMS (Dom√≠nio)
+#Logado no dom√≠nio ou como administrador do Windows 
+
+#V√° no caminhoC:/Windows/System32/drivers/etc
+
+#Recorte o arquivo hosts e jogue na √°rea de trabalho
+
+#Abra como bloco de notas e ao final coloque o IP da m√°quina Ubuntu d√™ espa√ßo e coloque o nome do dom√≠nio da m√°quina ex: www.[algumacoisa].com
+
+#Salve e jogue novamente o arquivo no mesmo local que estava 
+
+#Abra o Internet Explorer e digite o nome do dom√≠nio/drupal
+
+#VemSerFeliz
 
 #13/11/2018
